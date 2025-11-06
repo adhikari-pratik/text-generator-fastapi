@@ -45,8 +45,8 @@ models: Dict[str, Any] = {}
 
 try:
     logger.info("Loading GPT-2 model...")
-    models['text-generation'] = pipeline('text-generation', model='gpt2')
-    logger.info("GPT-2 model loaded successfully")
+    models['text-generation'] = pipeline('text-generation', model='distilgpt2')
+    logger.info("Loading distilgpt2 model loaded successfully")
     
     logger.info("Loading DistilBERT sentiment analysis model...")
     models['sentiment-analysis'] = pipeline('sentiment-analysis', model='distilbert-base-uncased-finetuned-sst-2-english')
